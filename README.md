@@ -9,6 +9,7 @@ Thanks for the help
 * Use openresty with lua
 * Typical auth endpoints /login, /logout, /auth/github/callback
 * / should not be reachable unless logged in
+* Session has to stay and not require login on each visit
 * Try to avoid using redis(might be required)
 
 
