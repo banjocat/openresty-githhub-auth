@@ -1,3 +1,4 @@
+WORK IN PROGRESS
 # Learning excersise for openresty and Oauth2
 Thanks for the help
 * http://www.staticshin.com/programming/definitely-an-open-resty-guide/
