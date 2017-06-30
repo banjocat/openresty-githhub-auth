@@ -5,10 +5,18 @@ Thanks for the help
 * https://tools.ietf.org/html/draft-ietf-oauth-device-flow-06
 * http://tylerneylon.com/a/learn-lua/
 
-Goals
+### Goals
 * Use openresty with lua
 * Typical auth endpoints /login, /logout, /auth/github/callback
 * / should not be reachable unless logged in
 * Try to avoid using redis(might be required)
+
+
+### .env
+export client_id="XXXXX" # Github client id
+export stage="randomstring" # session secret.. just use some random string
+
+
+
 
 
