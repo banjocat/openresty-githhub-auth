@@ -14,8 +14,10 @@ Thanks for the help
 
 
 ### .env
+```
 export client_id="XXXXX" # Github client id
 export stage="randomstring" # session secret.. just use some random string
+```
 
 
 
