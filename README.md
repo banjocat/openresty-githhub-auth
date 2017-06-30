@@ -3,3 +3,11 @@ Thanks for the help
 * http://www.staticshin.com/programming/definitely-an-open-resty-guide/
 * https://tools.ietf.org/html/draft-ietf-oauth-device-flow-06
 * http://tylerneylon.com/a/learn-lua/
+
+Goals
+* Use openresty with lua
+* Typical auth endpoints /login, /logout, /auth/github/callback
+* / should not be reachable unless logged in
+* Try to avoid using redis(might be required)
+
+
