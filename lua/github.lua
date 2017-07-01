@@ -13,26 +13,26 @@ end
 function github.get_token(ngx)
     local code = ngx.req.get_uri_args()["code"]
     local hc = http:new()
-    local data = {
-        client_id = os.getenv("client_id"),
-        client_secret = os.getenv("client_secret"),
-        code = code
-    }
-    local data_json = json.encode(data)
-    local res, err = hc:request_uri("https://github.com/login/oauth/access_token/",
+    local client_param = "client_id=" .. os.getenv("client_id")
+    local secret_param = "&client_secret=" .. os.getenv("client_secret")
+    local code_param = "&code=" .. code
+    local params = client_param .. secret_param .. code_param
+
+    local res, err = hc:request_uri("https://github.com/login/oauth/access_token?" .. params,
     {
         method = "POST",
         headers = {
-            ["Content-Type"] = "application/json"
+            Accept = "application/json"
         },
-        body = data_json
+        ssl_verify = false, -- Need to eventually do handshake
     })
-    if not rest then
+    if not res then
         ngx.say("failed request: ", err)
-        return "no"
+        return false
     end
-    ngx.say(res.status)
-    return "12"
+    local res_json = json.decode(res.body).access_token
+    ngx.say(res_json)
+    return res_json
 end
 
 return github
