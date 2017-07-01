@@ -7,6 +7,7 @@ Thanks for the help
 
 ### Goals
 * Use openresty with lua
+* Make the conf logic it uses extendable (complements docker extension)
 * Typical auth endpoints /login, /logout, /auth/github/callback
 * / should not be reachable unless logged in
 * Session has to stay and not require login on each visit
@@ -15,7 +16,7 @@ Thanks for the help
 * Encrypt and decrypt clientId
 * Authorization via Org and/or username
 * Sample login page but should be easy to override
-* Try to avoid using redis(might be required)
+* Try to avoid using redis(might be required) Perhaps allow local and redis storage
 
 
 ### Requirements
