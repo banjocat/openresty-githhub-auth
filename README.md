@@ -5,6 +5,16 @@ Thanks for the help
 * https://tools.ietf.org/html/draft-ietf-oauth-device-flow-06
 * http://tylerneylon.com/a/learn-lua/
 
+### What does this solve?
+You have application endpoints that may only support basic auth.
+
+#### Examples
+* Flower (Celery monitor)
+* Spark worker GUI
+* Marathon, Mesos or Aurora GUIs
+* Kibana
+* Many others
+
 ### Goals
 * Use openresty with lua
 * Make the conf logic it uses extendable (complements docker extension)
