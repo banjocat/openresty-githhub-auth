@@ -10,6 +10,7 @@ Thanks for the help
 * Typical auth endpoints /login, /logout, /auth/github/callback
 * / should not be reachable unless logged in
 * Session has to stay and not require login on each visit
+* Session should delete after an hour of inactivty
 * Try to avoid using redis(might be required)
 
 
