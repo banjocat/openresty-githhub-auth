@@ -11,6 +11,10 @@ Thanks for the help
 * / should not be reachable unless logged in
 * Session has to stay and not require login on each visit
 * Session should delete after an hour of inactivty
+* Create docker image and make it easily for others to use
+* Encrypt and decrypt clientId
+* Authorization via Org and/or username
+* Sample login page but should be easy to override
 * Try to avoid using redis(might be required)
 
 
