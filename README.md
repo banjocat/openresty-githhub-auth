@@ -14,6 +14,12 @@ Thanks for the help
 * Try to avoid using redis(might be required)
 
 
+### Requirements
+* openresty
+* luarocks
+* `sudo luarocks install lua-resty-http`
+* `sudo luarocks install lua-cjson`
+
 ### .env
 ```
 export client_id="XXXXX" # Github client id
