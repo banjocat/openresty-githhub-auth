@@ -17,6 +17,7 @@ Thanks for the help
 ```
 export client_id="XXXXX" # Github client id
 export stage="randomstring" # session secret.. just use some random string
+export github_auth_url="http://github.com/login/oauth/authorize"
 ```
 
 
