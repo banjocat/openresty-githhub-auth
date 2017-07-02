@@ -37,7 +37,7 @@ function github.check_login(session)
     end
 end
 
-function github.start_session(session)
+function github.start_session(session, gitId)
     session.data.name = gitId
     session:save()
 end
