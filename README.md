@@ -6,8 +6,7 @@ Thanks for the help
 * http://tylerneylon.com/a/learn-lua/
 
 ### What does this solve?
-You have application endpoints that may only support basic auth.
-
+You have application endpoints that may only support basic auth.  
 #### Examples
 * Flower (Celery monitor)
 * Spark worker GUI
@@ -34,10 +33,12 @@ You have application endpoints that may only support basic auth.
 * luarocks
 * `sudo luarocks install lua-resty-http`
 * `sudo luarocks install lua-cjson`
+* `sudo luarocks install lua-resty-session`
 
 ### .env
 ```
 export client_id="XXXXX" # Github client id
+export client_secret="XXXXXXXX" # github secret
 export stage="randomstring" # session secret.. just use some random string
 export github_auth_url="http://github.com/login/oauth/authorize"
 ```

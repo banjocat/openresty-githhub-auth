@@ -12,6 +12,7 @@ end
 
 function github.get_userdata(ngx, access_token)
     local hc = http:new()
+    ngx.log(ngx.INFO, access_token)
     local res, err = hc:request_uri("https://api.github.com/user",
     {
         method = "GET",
@@ -25,11 +26,22 @@ function github.get_userdata(ngx, access_token)
         ngx.say("failed request: ", err)
         return false
     end
-
-    ngx.print(res.body)
-    ngx.send(res.body)
-    return res_jsonn
+    
+    local gitId = json.decode(res.body).id
+    return gitId
 end
+
+function github.check_login(session)
+    if not session.data.name then
+        ngx.redirect("/login")
+    end
+end
+
+function github.start_session(session)
+    session.data.name = gitId
+    session:save()
+end
+
 
 function github.get_token(ngx)
     local code = ngx.req.get_uri_args()["code"]
@@ -48,12 +60,12 @@ function github.get_token(ngx)
         ssl_verify = false, -- Need to eventually do handshake
     })
     if not res then
-        ngx.say("failed request: ", err)
-        return false
+        ngx.log(ngx.ERROR, "failed request: " .. err)
+        ngx.redirect("/login")
     end
     local access_token = json.decode(res.body).access_token
-    ngx.print(res.body)
-    ngx.print(access_token)
+    ngx.log(ngx.INFO, res.body)
+    ngx.log(ngx.INFO, access_token)
     return access_token
 end
 
