@@ -9,7 +9,6 @@ Thanks for the help
 You have application endpoints that may only support basic auth.  
 #### Examples
 * Flower (Celery monitor)
-* Spark worker GUI
 * Marathon, Mesos or Aurora GUIs
 * Kibana
 * Many others
