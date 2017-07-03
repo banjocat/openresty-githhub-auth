@@ -24,6 +24,7 @@ You have application endpoints that may only support basic auth.
 * Encrypt and decrypt clientId
 * Authorization via Org and/or username
 * Sample login page but should be easy to override
+* Should be able to work with enterprise github
 * Try to avoid using redis(might be required) Perhaps allow local and redis storage
 
 
