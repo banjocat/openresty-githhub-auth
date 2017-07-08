@@ -1,4 +1,8 @@
 WORK IN PROGRESS
+# Warning...
+Don't use the certs that come with this.. create your own. Use letsencrypt.
+
+
 # Learning excersise for openresty and Oauth2
 Thanks for the help
 * http://www.staticshin.com/programming/definitely-an-open-resty-guide/

@@ -1,0 +1,7 @@
+version: '2'
+services:
+  github_oauth:
+    build: .
+    ports:
+      - "4000:4000"
+  
