@@ -18,18 +18,18 @@ You have application endpoints that may only support basic auth.
 * Many others
 
 ### Goals
-* Use openresty with lua
+* ~~Use openresty with lua~~
 * Make the conf logic it uses extendable (complements docker extension)
-* Typical auth endpoints /login, /logout, /auth/github/callback
-* / should not be reachable unless logged in
-* Session has to stay and not require login on each visit
+* ~~Typical auth endpoints /login, /logout, /auth/github/callback~~
+* ~~/ should not be reachable unless logged in~~
+* ~~Session has to stay and not require login on each visit~~
 * Session should delete after an hour of inactivty
-* Create docker image and make it easily for others to use
-* Encrypt and decrypt clientId
+* ~~Create docker image and make it easily for others to use~~
+* ~~Encrypt and decrypt clientId~~
 * Authorization via Org and/or username
 * Sample login page but should be easy to override
 * Should be able to work with enterprise github
-* Try to avoid using redis(might be required) Perhaps allow local and redis storage
+* ~~Try to avoid using redis(might be required) Perhaps allow local and redis storage~~
 
 
 ### Requirements
